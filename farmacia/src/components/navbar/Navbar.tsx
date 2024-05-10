@@ -1,18 +1,18 @@
-import { Link } from 'react-router-dom'
-import React from 'react'
+import { ShoppingCart, User } from "@phosphor-icons/react"
+import { Link } from "react-router-dom"
 
 function Navbar() {
-
   return (
     <>
-      <div className='w-full bg-purple-800 text-white flex justify-center py-4 '>
+      <div className='w-full bg-teal-500 text-white flex justify-center py-4'>
         <div className="container flex justify-between text-lg">
+          <Link to='/home' className='text-2xl font-bold uppercase'>Farmácia Generation</Link>
 
           <div className='flex gap-4'>
-            <Link to='/login' className='hover:underline'>Login</Link>
-            <Link to='/home' className='hover:underline'>Home</Link>
-            <div className='hover:underline'>Produtos</div>
-            <div className='hover:underline'>Sair</div>
+            <Link to='/categorias' className='hover:underline'>Categoria</Link>
+            <Link to='/cadastroCategoria' className='hover:underline'>Cadastrar Categoria</Link>
+            <User size={25} weight="bold"></User>
+            <ShoppingCart size={24} weight="bold"></ShoppingCart>
           </div>
         </div>
       </div>

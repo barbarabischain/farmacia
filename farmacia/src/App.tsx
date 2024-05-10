@@ -2,6 +2,10 @@ import { BrowserRouter, Route, Routes } from "react-router-dom"
 import Footer from "./components/footer/Footer"
 import Navbar from "./components/navbar/Navbar"
 import Home from "./pages/home/Home"
+import ListaCategorias from "./components/categorias/listarCategorias/listarCategorias"
+import FormularioCategorias from "./components/categorias/formularioCategorias/formularioCategorias"
+import DeletarCategorias from "./components/categorias/deletarCategorias/deletarCategorias"
+
 
 function App() {
   return (
@@ -9,8 +13,14 @@ function App() {
       <Navbar />
       <div className='min-h-[80vh]'>
         <Routes>
-          <Route path="/home" element={<Home />} />
+
           <Route path="/" element={<Home />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/categorias" element={<ListaCategorias />} />
+          <Route path="/cadastroCategoria" element={<FormularioCategorias />} />
+          <Route path="/editarCategoria/:id" element={<FormularioCategorias />} />
+          <Route path="/deletarCategoria/:id" element={<DeletarCategorias />} />
+
         </Routes>
       </div>
       <Footer />
